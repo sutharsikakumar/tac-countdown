@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traders at Carolina · Countdown Round</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage">
+  <div class="view" id="v-players"></div>
+  <div class="view" id="v-settings"></div>
+  <div class="view" id="v-bracket"></div>
+  <div class="view" id="v-match">
+    <div class="band">
+      <div class="side l"><div class="pb"><div class="pn" id="nL"></div><div class="bt"><button class="btn ok" id="cL" data-act="correct" data-p="a">Correct</button><button class="btn no" id="wL" data-act="wrong" data-p="a">Wrong</button></div></div><div class="score" id="sL">0</div></div>
+      <div class="ring" id="ring"><svg width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#e2e4ea" stroke-width="14"/><circle class="arc" id="arc" cx="100" cy="100" r="86" fill="none" stroke="#1b2350" stroke-width="14" transform="rotate(-90 100 100)"/></svg><div class="t" id="clk">0:30</div></div>
+      <div class="side r"><div class="score" id="sR">0</div><div class="pb"><div class="pn" id="nR"></div><div class="bt"><button class="btn ok" id="cR" data-act="correct" data-p="b">Correct</button><button class="btn no" id="wR" data-act="wrong" data-p="b">Wrong</button></div></div></div>
+    </div>
+    <div class="mainc">
+      <div class="cardwrap"><div class="card" id="card"><div class="inner">
+        <div class="face f"><div class="cd" id="cd">3</div><div class="qt" id="qt"></div></div>
+        <div class="face b"><div class="ans" id="ans"></div><div class="sol" id="sol"></div></div>
+      </div></div></div>
+      <div class="banner" id="banner"></div>
+      <div class="ctrl"><button class="btn" id="bPause" data-act="pause">Pause</button><button class="btn" id="bAns" data-act="answer">Show answer</button><button class="btn solid" id="bNext" data-act="next">Next question</button></div>
+      <div class="under"><button class="link" data-act="undo" id="bUndo">Undo last action</button><button class="link" data-act="leave" id="bLeave">Leave match</button></div>
+    </div>
+  </div>
+  <div id="modal"><div class="box"><p id="mMsg"></p><div class="acts"><button class="btn" data-act="mcancel">Cancel</button><button class="btn solid" data-act="mok" id="mOk">Confirm</button></div></div></div>
+</div>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
